@@ -1,0 +1,24 @@
+<div class="book"
+     [routerLink]="book.ID + '/details'"
+>
+    <img src="assets/book.png" alt="">
+    <div class="book__heading">
+        <h6>{{date | date}}</h6>
+        <h2>{{book.Title}}</h2>
+    </div>
+    <div class="book__authors">
+        <ul *ngIf="showAuthors">
+            <li *ngFor="let author of authors">
+                {{author}}
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="authorsButton">
+    <button class="btn btn-success"
+            (click)="emitToggle()"
+    >
+        {{showAuthors ? 'Hide' : 'Show'}} authors
+    </button>
+</div>
+

@@ -1,0 +1,15 @@
+<app-chart [booksEmitter]="booksEmitter"></app-chart>
+<div class="books-container">
+    <div class="row">
+        <div class="col-12 col-md-6 col-xl-3"
+             *ngFor="let book of books; let i = index"
+        >
+            <app-book *ngIf="i < 4"
+                      [book]="book"
+                      [authors]="getBookAuthors(book.ID)"
+                      [showAuthors]="showAuthors"
+                      (toggleAuthors)="toggleAuthors()"
+            ></app-book>
+        </div>
+    </div>
+</div>

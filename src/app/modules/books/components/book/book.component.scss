@@ -1,0 +1,26 @@
+.book {
+    position: relative;
+    color: white;
+    margin-bottom: 20px;
+    img {
+        width: 100%;
+    }
+    &__heading {
+        position: absolute;
+        top: 25px;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    &__authors {
+        position: absolute;
+        bottom: 20px;
+        left: 16px;
+        ul {
+            list-style: none;
+        }
+    }
+}
+.authorsButton {
+    text-align: center;
+}

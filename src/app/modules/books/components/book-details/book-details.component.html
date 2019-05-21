@@ -1,0 +1,20 @@
+<div class="container bookDetails">
+    <div class="row">
+        <div class="col">
+            <button class="btn-primary btn"
+                    (click)="goBack()"
+            >
+                < Go Back
+            </button>
+        </div>
+    </div>
+    <div class="row bookInfo"
+         *ngIf="book"
+    >
+        <h4 class="col-12"> <b>Title:</b> {{book.Title}} </h4>
+        <h4 class="col-12"> <b>Description:</b> {{book.Description}} </h4>
+        <h4 class="col-12"> <b>Count pages:</b> {{book.PageCount}} </h4>
+        <h4 class="col-12"> <b>Excerpt:</b> {{book.Excerpt}} </h4>
+        <h4 class="col-12"> <b>Publish Date:</b> {{book.PublishDate | date}} </h4>
+    </div>
+</div>
